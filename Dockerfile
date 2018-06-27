@@ -17,7 +17,7 @@ COPY --from=GPG_KEY /etc/apt/trusted.gpg.d/x2go_ubuntu_stable.gpg /etc/apt/trust
 COPY --from=GPG_KEY /etc/apt/sources.list.d/x2go-ubuntu-stable-bionic.list /etc/apt/sources.list.d/
 
 RUN apt-get update && \
-    apt-get -y install x2goclient --no-install-recommends && \
+    apt-get -y install x2goclient openssh-sftp-server --no-install-recommends && \
     rm -rf /var/lib/lists/*
 
 RUN adduser --disabled-password --gecos swoopla swoopla
