@@ -24,11 +24,9 @@ RUN adduser --disabled-password --gecos swoopla swoopla
 
 USER swoopla
 
-ENV USER swoopla
-
-ENV DISPLAY :0.0
-
-ENV SSH_AUTH_SOCK /run/user/1000/keyring/ssh
+ENV USER=swoopla \
+    DISPLAY=:0.0 \
+    SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 
 VOLUME ["/home/swoopla/.x2goclient","/tmp/.X11-unix","/run/user/1000/keyring/ssh"]
 
