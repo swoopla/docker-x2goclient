@@ -1,4 +1,4 @@
-FROM ubuntu:lastest as GPG_KEY
+FROM ubuntu:focal as GPG_KEY
 
 LABEL maintainer "Swoopla <p.vibet@gmail.com>"
 
@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:x2go/stable
 
-FROM ubuntu:lastest
+FROM ubuntu:focal
 
 LABEL maintainer "Swoopla <p.vibet@gmail.com>"
 
