@@ -14,7 +14,7 @@ LABEL maintainer "Swoopla <p.vibet@gmail.com>"
 
 COPY --from=GPG_KEY /etc/apt/trusted.gpg.d/x2go_ubuntu_stable.gpg /etc/apt/trusted.gpg.d/
 
-COPY --from=GPG_KEY /etc/apt/sources.list.d/x2go-ubuntu-stable-bionic.list /etc/apt/sources.list.d/
+COPY --from=GPG_KEY /etc/apt/sources.list.d/x2go-ubuntu-stable-focal.list /etc/apt/sources.list.d/
 
 RUN apt-get update && \
     apt-get -y install x2goclient openssh-sftp-server openssh-server --no-install-recommends && \
